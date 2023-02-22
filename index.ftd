@@ -351,6 +351,7 @@ padding-bottom.px: 8
 
 -- ftd.image:
 src: $menu-mobile.site-logo
+link: $menu-mobile.site-url
 
 -- end: ftd.column
 
@@ -738,6 +739,7 @@ if: { header-mobile.site-logo != NULL }
 src: $header-mobile.site-logo
 width.fixed.px: $header-mobile.logo-width
 height.fixed.px: $header-mobile.logo-height
+link: $header-mobile.site-url
 
 -- ftd.text: $header-mobile.site-name
 if: { header-mobile.site-name != NULL }
@@ -745,6 +747,7 @@ role: $inherited.types.copy-large
 color: $inherited.colors.text-strong
 white-space: nowrap
 align-self: center
+link: $header-mobile.site-url
 
 -- fallback-title:
 if: { header-mobile.site-logo == NULL }
