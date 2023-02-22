@@ -1,0 +1,8 @@
+-- import: fastn
+
+-- fastn.package: fifthtry.github.io/simple-header
+download-base-url: https://raw.githubusercontent.com/fifthtry/simple-header/main
+
+-- fastn.dependency: fifthtry.github.io/doc-site as ds
+
+-- fastn.auto-import: ds
