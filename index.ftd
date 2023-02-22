@@ -729,12 +729,6 @@ width: fill-container
 spacing.fixed.px: 16
 
 -- ftd.image:
-src: $header-mobile.menu-icon
-width.fixed.px: 24
-align-self: center
-$on-click$: $ftd.toggle($a = $header-mobile.sidebar-open) 
-
--- ftd.image:
 if: { header-mobile.site-logo != NULL } 
 src: $header-mobile.site-logo
 width.fixed.px: $header-mobile.logo-width
@@ -773,6 +767,7 @@ color: $inherited.colors.text-strong
 if: { header-mobile.brand-site-name != NULL }
 site-name: $header-mobile.brand-site-name
 
+
 -- end: ftd.row
 
 -- ftd.row:
@@ -784,6 +779,13 @@ if: { header-mobile.pricing-cta }
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- ftd.image:
+if: { header-mobile.menu-icon != NULL }
+src: $header-mobile.menu-icon
+width.fixed.px: 24
+align-self: center
+$on-click$: $ftd.toggle($a = $header-mobile.sidebar-open) 
 
 -- end: ftd.row
 
