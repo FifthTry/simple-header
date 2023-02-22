@@ -3,6 +3,25 @@
 -- fastn.package: fifthtry.github.io/simple-header
 download-base-url: https://raw.githubusercontent.com/fifthtry/simple-header/main
 
--- fastn.dependency: fifthtry.github.io/doc-site as ds
+-- fastn.dependency: fifthtry.github.io/package-doc
+-- fastn.dependency: fifthtry.github.io/product-switcher 
 
--- fastn.auto-import: ds
+
+-- fastn.sitemap:
+
+# Roadmap: /
+
+## Home: /
+
+
+## Payments: /
+
+## Business Operations: /
+
+## Developer Tools: /
+
+## Security: /
+
+## All Products: /
+
+# Journal: /
