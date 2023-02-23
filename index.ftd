@@ -164,6 +164,7 @@ login-btn-txt: $header.login-btn-txt
 sign-in-txt: $header.sign-in-txt
 products: $header.products
 $show-section: $header.show-section
+show-sections: $header.show-sections
 
 -- header-desktop:
 if: { ftd.device != "mobile" }
@@ -241,6 +242,7 @@ text-color: $header.text-color
 active-text-color: $header.active-text-color
 products: $header.products
 $show-section: $header.show-section
+show-sections: $header.show-sections
 
 -- end: ftd.column
 
@@ -317,6 +319,7 @@ optional string font-family:
 optional string login-btn-txt:
 optional string sign-in-txt:  
 boolean login-button:
+optional boolean show-sections: 
 
 -- ftd.column:
 width.fixed.calc: 100% - 48px
@@ -711,10 +714,11 @@ ftd.color menu-bg:
 ftd.color menu-link: 
 ftd.color menu-link-active: 
 boolean pricing-cta:
+boolean show-sections: 
 
 -- ftd.column: 
 width: fill-container
-background.solid: $inherited.colors.background.step-1
+background.solid: $header-mobile.menu-bg
 $on-click-outside$: $ftd.set-bool($a = $header-mobile.show-section, v = false)
 
 -- ftd.row:
@@ -794,6 +798,15 @@ width: fill-container
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.row:
+if: { !header-mobile.show-sections }
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+min-height.fixed.px: 50
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { header-mobile.show-sections }
 width: fill-container
 
 -- ftd.row:
@@ -840,6 +853,7 @@ menu-hover-bg: $header-mobile.menu-hover-bg
 width: fill-container
 background.solid: $inherited.colors.background.step-2
 padding-horizontal.px: 20
+if: { header-mobile.show-sections }
 $on-click$: $ftd.toggle($a = $header-mobile.show-section, v=true)
 
 -- ftd.row:
