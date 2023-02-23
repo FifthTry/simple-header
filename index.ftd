@@ -819,7 +819,7 @@ color: $inherited.colors.text-strong
 link: $header-mobile.current-section.url
 background.solid: $inherited.colors.background.step-1
 padding-vertical.px: 12
-padding-horizontal.px: 12
+padding-horizontal.px: 22
 width: fill-container
 white-space: nowrap
 
