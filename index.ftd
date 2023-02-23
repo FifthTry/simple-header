@@ -815,11 +815,11 @@ align-self: start
 -- ftd.text: $header-mobile.current-section.title
 if: { header-mobile.current-section != NULL }
 role: $inherited.types.label-small
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 link: $header-mobile.current-section.url
-background.solid: $inherited.colors.cta-tertiary.base
-padding-vertical.px: 8
-padding-horizontal.px: 8
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 12
+padding-horizontal.px: 12
 width: fill-container
 white-space: nowrap
 
@@ -827,8 +827,8 @@ white-space: nowrap
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 8
-padding-top.px: 8
+spacing.fixed.px: 12
+padding-top.px: 12
 overflow-x: auto
 
 -- header-item-mobile-view: $obj.title
@@ -851,14 +851,14 @@ menu-hover-bg: $header-mobile.menu-hover-bg
 
 -- ftd.row:
 width: fill-container
-background.solid: $inherited.colors.background.step-2
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 20
 padding-horizontal.px: 20
 if: { header-mobile.show-sections }
 $on-click$: $ftd.toggle($a = $header-mobile.show-section, v=true)
 
 -- ftd.row:
 width: fill-container
-padding-vertical.px: 16
 spacing.fixed.px: 4
 
 -- ftd.text: $header-mobile.current-subsection.title
@@ -917,12 +917,14 @@ width.fixed.px: 12
 if: { header-mobile.show-section }
 width: fill-container
 anchor: parent
-background.solid: $inherited.colors.background.step-2
+background.solid: $inherited.colors.background.step-1
 top.px: 48
 left.px: 0
 z-index: 999
 max-height.fixed.px: 300
 overflow-y: auto
+border-bottom-width.px: 1
+border-color: $inherited.colors.border-strong
 
 -- ftd.column:
 width: fill-container
