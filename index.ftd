@@ -1138,9 +1138,6 @@ white-space: nowrap
 padding-left.px: 10
 color: $inherited.colors.text
 color if { header-toc-item-mobile-view.is-active }: $inherited.colors.cta-primary.base
-;;border-bottom-width.px if { header-toc-item-mobile-view.current-url == header-toc-item-mobile-view.link }: 2
-;;border-color if { header-toc-item-mobile-view.current-url == header-toc-item-mobile-view.link }: $header-toc-item-mobile-view.active-text-color
-margin-left.px: 10
 
 -- end: ftd.row
 
