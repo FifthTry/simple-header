@@ -80,7 +80,7 @@ optional string brand-site-url:
 optional string brand-site-name:
 boolean parent-brand: false
 boolean pricing-cta: false
-ftd.image-src menu-icon: $assets.files.static.header.hamburger-dark.svg
+ftd.image-src menu-icon: $assets.files.static.header.hamburger.svg
 string current-url: /header3/
 pr.toc-item list sections: 
 boolean $sidebar-open: false
