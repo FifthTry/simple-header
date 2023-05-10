@@ -166,8 +166,9 @@ products: $header.products
 $show-section: $header.show-section
 show-sections: $header.show-sections
 
+-- ftd.desktop:
+
 -- header-desktop:
-if: { ftd.device != "mobile" }
 site-logo: $header.site-logo
 site-url: $header.site-url 
 site-name: $header.site-name
@@ -207,9 +208,11 @@ products: $header.products
 max-width: $header.max-width
 show-sections: $header.show-sections
 
+-- end: ftd.desktop
+
+-- ftd.mobile:
 
 -- header-mobile:
-if: { ftd.device == "mobile" }
 site-logo: $header.site-logo
 $sidebar-open: $header.sidebar-open
 pricing-cta: $header.pricing-cta
@@ -243,6 +246,8 @@ active-text-color: $header.active-text-color
 products: $header.products
 $show-section: $header.show-section
 show-sections: $header.show-sections
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -593,7 +598,7 @@ if: { header-desktop.show-sections }
 width: fill-container
 
 -- ftd.text: $header-desktop.current-section.title
-if: { header-desktop.current-section.title != NULL }
+if: { header-desktop.current-section != NULL }
 role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
 link: $header-desktop.current-section.url
@@ -1580,17 +1585,24 @@ ftd.image-src icon-github: $assets.files.static.icon-github.svg
 -- ftd.row:
 width: fill-container
 
+-- ftd.desktop:
+
 -- login-signup-desktop:
-if: { ftd.device != "mobile" }
 login: $login-signup.login
 sign-in: $login-signup.sign-in
 icon-github: $login-signup.icon-github
 
+-- end: ftd.desktop
+
+
+-- ftd.mobile:
+
 -- login-signup-mobile:
-if: { ftd.device == "mobile" }
 login: $login-signup.login
 sign-in: $login-signup.sign-in
 icon-github: $login-signup.icon-github
+
+-- end: ftd.mobile
 
 -- end: ftd.row
 
